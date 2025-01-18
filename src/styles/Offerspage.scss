@@ -1,0 +1,107 @@
+.offer-sec {
+  width: 100%;
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 1rem 0 1.5rem 1.2rem;
+    }
+  }
+  
+  .code-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .card-image {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid lightgray;
+      background-color: #fcfcfc;
+      width: 25rem;
+      padding: 1rem;
+      border-radius: 1.2rem;
+      margin-bottom: 1rem;
+
+      img {
+        width: 2.7rem;
+        background-color: rgb(21, 55, 85);
+        border-radius: 0.8rem;
+      }
+
+      .code-name {
+        font-size: 0.85rem;
+        margin: 0.9rem 0 1.9rem 0;
+        color: gray;
+      }
+
+      .counts {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.camp-tabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 0.6rem;
+  border-radius: 0.8rem;
+
+  .camp-head {
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .camp-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;    gap: 3rem;
+    cursor: pointer;
+
+    .inputs {
+      font-size: 1rem;
+      height: 2.5rem;
+      width: 19rem;
+      border-radius: 0.3rem;
+      background-color: #fcfcfc;
+      color: rgba(138, 138, 139, 1);
+      border: 1px solid lightgray;
+      padding: 0.5rem 1.5rem;
+      box-sizing: border-box;
+    }
+
+    .camp-btn-sec {
+      display: flex;
+      justify-content: center;
+      align-items: center;    }
+
+    .offer-btn {
+      background-color: blue;
+      padding: 0.8rem 1.4rem;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-left: 1rem;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;      }
+    }
+  }
+}
