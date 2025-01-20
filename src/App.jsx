@@ -10,7 +10,7 @@ import Offerspageform from "./pages/Offerspageform";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/bigcity-admin-panel-demo">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/layout" element={<Layout />}>

@@ -38,7 +38,7 @@
   .form-card {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 1rem;
   }
   .admission-form {
@@ -46,7 +46,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     label {
       margin-bottom: 0.2rem;
       color: #000;
@@ -54,12 +54,12 @@
 
     input {
       padding: 0.7rem 1rem 0.8rem;
-      width: 96%;
+      width: -webkit-fill-available;
+      font-size: 0.9rem;
       border-radius: 0.6rem;
-      border: 1px solid rgba(235, 235, 235, 1);
       margin-bottom: 0.7rem;
-      font-size: 1rem;
       background-color: #fcfcfc;
+      border: 1px solid rgb(235, 235, 235);
       color: rgba(138, 138, 139, 1);
       &::placeholder {
         font-size: 0.9rem;
@@ -67,12 +67,13 @@
     }
     select {
       padding: 0.7rem 1rem 0.8rem;
-      width: 96%;
+      width: -webkit-fill-available;
+      // width: 90%;
       font-size: 0.9rem;
       border-radius: 0.6rem;
       margin-bottom: 0.7rem;
       background-color: #fcfcfc;
-      color: rgba(138, 138, 139, 1);
+      color: rgb(35, 35, 175);
       border: 1px solid rgba(235, 235, 235, 1);
     }
   }

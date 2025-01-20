@@ -122,7 +122,7 @@ const Campaign = () => {
 
   // Column Definitions: Defines the columns to be displayed.
   const [colDefs, setColDefs] = useState([
-    { field: "Name", checkboxSelection: true },
+    { field: "Name"},
     { field: "StartDate" },
     { field: "EndDate" },
     { field: "Frequency" },

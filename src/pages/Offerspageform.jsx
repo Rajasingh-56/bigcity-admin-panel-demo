@@ -1,11 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import Attachment from "../Assets/attachment.png";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router";
 import { GoPlus } from "react-icons/go";
-import "../styles/Offerspageform.scss"
+import "../styles/Offerspageform.scss";
 const OfferValid = Yup.object().shape({
   name: Yup.string()
     .min(2, "Too Short!")
@@ -23,6 +24,7 @@ const OfferValid = Yup.object().shape({
 
 const Offerspageform = () => {
   const navigate = useNavigate();
+  const [selectThumbnail, setSelectThumbnail] = useState("");
 
   const goBackPage = () => {
     navigate("/layout/offerspage");
@@ -181,10 +183,19 @@ const Offerspageform = () => {
                   <input
                     type="text"
                     className="name"
-                    placeholder="Add an attachment (optional)"
+                    placeholder={
+                      selectThumbnail || "Add an attachment (optional)"
+                    }
+                    readOnly
                   />
                   <img src={Attachment} alt="" className="admission-img" />
-                  <input type="file" className="admission-input" />
+                  <input
+                    type="file"
+                    className="admission-input"
+                    onChange={(e) => {
+                      setSelectThumbnail(e.target.files[0]?.name || "");
+                    }}
+                  />{" "}
                 </div>
               </div>
 

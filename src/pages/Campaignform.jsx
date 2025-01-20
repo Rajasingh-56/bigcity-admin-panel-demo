@@ -1,5 +1,6 @@
-import React, { use } from "react";
-import "../styles/Campaignform.scss"
+import React, { useState
+ } from "react";
+import "../styles/Campaignform.scss";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import UploadImage from "../Assets/upload.png";
 import Attachment from "../Assets/attachment.png";
@@ -23,11 +24,12 @@ const FormValid = Yup.object().shape({
 });
 
 const Campaignform = () => {
-
-const navigate= useNavigate();
-const goBack=()=>{
-  navigate("/layout")
-}
+  const navigate = useNavigate();
+  const [selectedVoucher, setSelectedVoucher] = useState("");
+  const [selectedThumbnail, setSelectedThumbnail] = useState("");
+  const goBack = () => {
+    navigate("/layout");
+  };
 
   return (
     <div className="campaign-form">
@@ -146,14 +148,21 @@ const goBack=()=>{
               <div className="admission-form ">
                 <label htmlFor="">Upload Voucher Code</label>
                 <div className="voucher">
-                  <input type="text" placeholder=".e.g.csv" />
+                  {/* <input type="text" placeholder=".e.g.csv" /> */}
+                  <input
+                    type="text"
+                    placeholder={selectedVoucher || "No file selected"}
+                    readOnly
+                  />
                   <img src={UploadImage} className="voucher-img" alt="" />
                   <input
                     className="voucher-input"
                     type="file"
                     name="voucher"
-                    value={values.voucher}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      setSelectedVoucher(e.target.files[0]?.name || "");
+                      handleChange(e);
+                    }}
                     onBlur={handleBlur}
                   />
                   {errors.voucher && touched.voucher && (
@@ -187,10 +196,19 @@ const goBack=()=>{
                   <input
                     type="text"
                     className="name"
-                    placeholder="Add an attachment (optional)"
+                    placeholder={
+                      selectedThumbnail || "Add an attachment (optional)"
+                    }
+                    readOnly
                   />
                   <img src={Attachment} alt="" className="admission-img" />
-                  <input type="file" className="admission-input" />
+                  <input
+                    type="file"
+                    className="admission-input"
+                    onChange={(e) => {
+                      setSelectedThumbnail(e.target.files[0]?.name || "");
+                    }}
+                  />
                 </div>
               </div>
 
