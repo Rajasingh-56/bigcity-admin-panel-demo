@@ -16,7 +16,7 @@ const FormValid = Yup.object().shape({
   description: Yup.string().min(5, "Too Short!").required("Required"),
   startdate: Yup.date().required("Required"),
   enddate: Yup.date()
-    .min(Yup.ref("startdate"), "End date must be after start date")
+    .min(Yup.ref("startdate"), "The End date must be after start date")
     .required("Required"),
   frequency: Yup.string().required("Required"),
   voucher: Yup.mixed().required("Required"),
@@ -53,7 +53,7 @@ const Campaignform = () => {
             voucher: "",
             campaignstatus: "",
           }}
-          // validationSchema={FormValid} // Temporarily comment this out
+          validationSchema={FormValid}
           onSubmit={(values) => {
             console.log("Form submitted", values);
             navigate("/layout");
@@ -151,10 +151,10 @@ const Campaignform = () => {
                   {/* <input type="text" placeholder=".e.g.csv" /> */}
                   <input
                     type="text"
-                    placeholder={selectedVoucher || "No file selected"}
+                    placeholder={selectedVoucher || ".e.g.csv"}
                     readOnly
                   />
-                  <img src={UploadImage} className="voucher-img" alt="" />
+                  <img src={UploadImage} className="voucher-img" alt="voucher image" />
                   <input
                     className="voucher-input"
                     type="file"
@@ -213,8 +213,8 @@ const Campaignform = () => {
               </div>
 
               <div className="btn">
-                <button className="cancel-btn">Cancel</button>
-                <button className="camp-btn">Create Campaign</button>
+                <button className="cancel-btn" type="cancel" onClick={goBack}>Cancel</button>
+                <button className="camp-btn" type="submit">Create Campaign</button>
               </div>
             </Form>
           )}

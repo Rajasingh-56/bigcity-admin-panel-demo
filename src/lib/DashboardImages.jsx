@@ -1,26 +1,31 @@
+import userImage from "../Assets/user.png";
+import tickImage from "../Assets/tick.jpg";
+import keyImage from "../Assets/key.png";
+import blueImage from "../Assets/bluetick.png";
+
 export const DashboardImages = [
   {
     id: 1,
     name: "Total Users",
-    image: "./Images/user.png",
+    image: userImage,
     countdown: "99,999",
   },
   {
     id: 2,
     name: "Total Unique Code",
-    image: "./Images/key.png",
+    image: tickImage,
     countdown: "99,999",
   },
   {
     id: 3,
     name: "Redeemed Codes",
-    image: "./Images/tick.jpg",
+    image: keyImage,
     countdown: "99,999",
   },
   {
     id: 4,
     name: "Redeemed Codes",
-    image: "./Images/bluetick.png",
+    image: blueImage,
     countdown: "99,999",
   },
 ];

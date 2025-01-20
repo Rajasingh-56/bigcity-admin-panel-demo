@@ -52,7 +52,7 @@ const Offerspageform = () => {
             tags: "",
             textbox: "",
           }}
-          //   validationSchema={OfferValid} // Temporarily comment this out
+          validationSchema={OfferValid}
           onSubmit={(values) => {
             console.log("Form submitted", values);
             navigate("/layout/offerspage");
@@ -200,8 +200,17 @@ const Offerspageform = () => {
               </div>
 
               <div className="btn-offer">
-                <button className="offer-cancel-btn">Cancel</button>
-                <button className="offer-create-btn">
+                <button
+                  className="offer-cancel-btn"
+                  type="cancel"
+                  onClick={() => {
+                    handleReset(); 
+                    goBack(); 
+                  }}
+                >
+                  Cancel
+                </button>
+                <button className="offer-create-btn" type="submit">
                   Create offers{" "}
                   <span>
                     <GoPlus />

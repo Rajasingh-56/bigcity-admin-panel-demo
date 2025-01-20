@@ -36,7 +36,8 @@
   .form-card {
     display: flex;
     justify-content: center;
-    align-items: center; // gap: 0.9rem;
+    align-items: center;
+    gap: 1rem;
   }
   .admission-form {
     display: flex;
@@ -51,7 +52,7 @@
 
     input {
       padding: 0.7rem 1rem 0.8rem;
-      width: 96%;
+      width: -webkit-fill-available;
       border-radius: 0.6rem;
       border: 1px solid rgba(235, 235, 235, 1);
       margin-bottom: 0.7rem;
@@ -64,7 +65,7 @@
     }
     select {
       padding: 0.7rem 1rem 0.8rem;
-      width: 96%;
+      width: -webkit-fill-available;
       font-size: 0.9rem;
       border-radius: 0.6rem;
       margin-bottom: 0.7rem;
@@ -73,7 +74,7 @@
       border: 1px solid rgba(235, 235, 235, 1);
     }
     textarea {
-      width: 96%;
+      width: -webkit-fill-available;
       height: 4rem;
       padding: 0.7rem 1rem 0.8rem;
       background-color: #fcfcfc;
