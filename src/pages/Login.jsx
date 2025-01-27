@@ -43,7 +43,7 @@ const Login = () => {
             }}
             validationSchema={SignupSchema} 
             onSubmit={(values) => {
-              console.log("Form submitted", values);
+              console.log("Logged in", values);
               navigate("/layout");
             }}
           >

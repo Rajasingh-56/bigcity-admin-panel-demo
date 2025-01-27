@@ -118,8 +118,8 @@
   .voucher-img {
     // background-color: red;
     position: absolute;
-    top: 0.9rem;
-    right: 2rem;
+    top: 0.7rem;
+    right: 1rem;
   }
 }
 
@@ -145,5 +145,22 @@
     position: absolute;
     top: 20%;
     right: 50%;
+  }
+}
+
+.camp-form-footer ul {
+  display: flex;
+  // flex-direction: column;
+  font-size: 0.9rem;
+  justify-content: end;
+  gap: 5rem;
+  align-items: center;
+  margin: 3rem 3rem 0 0;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: gray;
+    }
   }
 }

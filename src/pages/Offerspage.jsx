@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from "react";
+import React, { useState, useMemo } from "react";
 import { DashboardImages } from "../lib/DashboardImages";
 import { GoPlus } from "react-icons/go";
 import { IoFilterOutline } from "react-icons/io5";
@@ -113,11 +113,11 @@ const Offerspage = () => {
   ]);
 
   const defaultColDefe = useMemo(() => {
-      return {
-        flex: 1,
-        // filter:true,
-      };
-    });
+    return {
+      flex: 1,
+      // filter:true,
+    };
+  });
 
   // Column Definitions: Defines the columns to be displayed.
   const [colDefs, setColDefs] = useState([
@@ -181,10 +181,30 @@ const Offerspage = () => {
               </div>
             </div>
           </div>
-          <div className="table ag-theme-quartz-dark " style={{ height: 480 }}>
-            <AgGridReact rowData={rowData} columnDefs={colDefs} defaultColDef={defaultColDefe}/>
+          <div className="table ag-theme-quartz-dark " style={{ height: 450 }}>
+            <AgGridReact
+              rowData={rowData}
+              columnDefs={colDefs}
+              defaultColDef={defaultColDefe}
+            />
           </div>
         </div>
+        <div className="offer-footer">
+          <ul>
+            <li>
+              <a href="">Terms & Condition</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">Help Desk</a>
+            </li>
+            <li>
+              <a href="">FAQs</a>
+            </li>
+          </ul>
+        </div>{" "}
       </div>
     </div>
   );

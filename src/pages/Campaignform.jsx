@@ -1,5 +1,4 @@
-import React, { useState
- } from "react";
+import React, { useState } from "react";
 import "../styles/Campaignform.scss";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import UploadImage from "../Assets/upload.png";
@@ -27,6 +26,7 @@ const Campaignform = () => {
   const navigate = useNavigate();
   const [selectedVoucher, setSelectedVoucher] = useState("");
   const [selectedThumbnail, setSelectedThumbnail] = useState("");
+
   const goBack = () => {
     navigate("/layout");
   };
@@ -55,7 +55,7 @@ const Campaignform = () => {
           }}
           validationSchema={FormValid}
           onSubmit={(values) => {
-            console.log("Form submitted", values);
+            console.log("Campaign form submitted", values);
             navigate("/layout");
           }}
         >
@@ -154,7 +154,11 @@ const Campaignform = () => {
                     placeholder={selectedVoucher || ".e.g.csv"}
                     readOnly
                   />
-                  <img src={UploadImage} className="voucher-img" alt="voucher image" />
+                  <img
+                    src={UploadImage}
+                    className="voucher-img"
+                    alt="voucher image"
+                  />
                   <input
                     className="voucher-input"
                     type="file"
@@ -201,7 +205,11 @@ const Campaignform = () => {
                     }
                     readOnly
                   />
-                  <img src={Attachment} alt="" className="admission-img" />
+                  <img
+                    src={Attachment}
+                    alt="attachment"
+                    className="admission-img"
+                  />
                   <input
                     type="file"
                     className="admission-input"
@@ -213,13 +221,37 @@ const Campaignform = () => {
               </div>
 
               <div className="btn">
-                <button className="cancel-btn" type="cancel" onClick={goBack}>Cancel</button>
-                <button className="camp-btn" type="submit">Create Campaign</button>
+                <button className="cancel-btn" type="cancel" onClick={goBack}>
+                  Cancel
+                </button>
+                <button className="camp-btn" type="submit">
+                  Create Campaign
+                </button>
               </div>
+              
             </Form>
+            
           )}
+          
         </Formik>
       </div>
+      <div className="camp-form-footer">
+          <ul>
+            <li>
+              <a href="">Terms & Condition</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">Help Desk</a>
+            </li>
+            <li>
+              <a href="">FAQs</a>
+            </li>
+          </ul>
+        </div>{" "}
+      
     </div>
   );
 };

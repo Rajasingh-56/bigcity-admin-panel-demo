@@ -116,13 +116,13 @@ const Campaign = () => {
   const defaultColDef = useMemo(() => {
     return {
       flex: 1,
-      // filter:true,
-    };
+      // filter: true,
+       };
   });
 
   // Column Definitions: Defines the columns to be displayed.
   const [colDefs, setColDefs] = useState([
-    { field: "Name"},
+    { field: "Name" },
     { field: "StartDate" },
     { field: "EndDate" },
     { field: "Frequency" },
@@ -144,7 +144,6 @@ const Campaign = () => {
         <div className="top-section">
           <h3>Dashboard</h3>
         </div>
-
         <div className="code-images">
           {DashboardImages.map((item) => (
             <div key={item.id} className="card-image">
@@ -154,7 +153,6 @@ const Campaign = () => {
             </div>
           ))}
         </div>
-
         <div className="table-section ">
           <div className="camp-tabel">
             <div className="camp-head">
@@ -184,7 +182,7 @@ const Campaign = () => {
             </div>
           </div>
 
-          <div className="table ag-theme-quartz-dark " style={{ height: 470 }}>
+          <div className="table ag-theme-quartz " style={{ height: 450 }}>
             <AgGridReact
               rowData={rowData}
               columnDefs={colDefs}
@@ -192,6 +190,22 @@ const Campaign = () => {
             />
           </div>
         </div>
+        <div className="footer">
+          <ul>
+            <li>
+              <a href="">Terms & Condition</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">Help Desk</a>
+            </li>
+            <li>
+              <a href="">FAQs</a>
+            </li>
+          </ul>
+        </div>{" "}
       </div>
     </div>
     // </div>

@@ -54,7 +54,7 @@ const Offerspageform = () => {
           }}
           validationSchema={OfferValid}
           onSubmit={(values) => {
-            console.log("Form submitted", values);
+            console.log("Offers form submitted", values);
             navigate("/layout/offerspage");
           }}
         >
@@ -203,10 +203,7 @@ const Offerspageform = () => {
                 <button
                   className="offer-cancel-btn"
                   type="cancel"
-                  onClick={() => {
-                    handleReset(); 
-                    goBack(); 
-                  }}
+                  onClick={goBackPage}
                 >
                   Cancel
                 </button>
@@ -221,6 +218,22 @@ const Offerspageform = () => {
           )}
         </Formik>
       </div>
+      <div className="offer-form-footer">
+        <ul>
+          <li>
+            <a href="">Terms & Condition</a>
+          </li>
+          <li>
+            <a href="">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="">Help Desk</a>
+          </li>
+          <li>
+            <a href="">FAQs</a>
+          </li>
+        </ul>
+      </div>{" "}
     </div>
   );
 };

@@ -130,12 +130,6 @@
     right: 0;
     opacity: 0;
   }
-  .voucher-img {
-    // background-color: red;
-    position: absolute;
-    top: 0.9rem;
-    right: 2rem;
-  }
 }
 
 .admission {
@@ -160,5 +154,22 @@
     position: absolute;
     top: 20%;
     right: 50%;
+  }
+}
+
+.offer-form-footer ul {
+  display: flex;
+  // flex-direction: column;
+  font-size: 0.9rem;
+  justify-content: end;
+  gap: 5rem;
+  align-items: center;
+  margin-right: 3.5rem;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: gray;
+    }
   }
 }
